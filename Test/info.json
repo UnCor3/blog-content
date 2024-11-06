@@ -6,7 +6,7 @@
   "author": "Jane Doe",
   "slug": "build-static-blog-with-mdx",
   "keywords": ["MDX", "Next.js", "Static Blog", "React", "Tutorial"],
-  "image": "/images/blog-image.jpg",
+  "image": "https://github.com/UnCor3/blog-content/blob/main/Test/test.jpg?raw=true",
   "og": {
     "title": "How to Build a Static Blog with MDX - A Complete Guide",
     "description": "This comprehensive guide will teach you how to build a static blog with MDX in Next.js.",

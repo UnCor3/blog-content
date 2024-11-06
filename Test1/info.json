@@ -5,11 +5,8 @@
   "date": "2024-11-06",
   "author": "uncore",
   "slug": "Test1",
-  "keywords": [
-    "blog",
-    "tutorial"
-  ],
-  "image": "/images/default.jpg",
+  "keywords": ["blog", "tutorial"],
+  "image": "https://github.com/UnCor3/blog-content/blob/main/Test1/test.jpg?raw=true",
   "og": {
     "title": "Untitled Post - A Blog Post",
     "description": "No description available for this post.",
@@ -21,9 +18,7 @@
     "image": "/images/default-twitter.jpg",
     "card": "summary_large_image"
   },
-  "tags": [
-    "generic"
-  ],
+  "tags": ["generic"],
   "reading_time": "5",
   "type": "coding-tutorial"
 }
