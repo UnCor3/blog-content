@@ -1,6 +1,6 @@
 {
   "title": "This is the title of the blog post",
-  "preview-title": "First blog post",
+  "previewTitle": "First blog post",
   "desc": "This is the description of the blog post. It will be used as the meta description for the blog post.",
   "date": "2024-11-06",
   "author": "Jane Doe",
