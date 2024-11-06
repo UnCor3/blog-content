@@ -1,0 +1,16 @@
+{
+  "name": "blog-content",
+  "version": "1.0.0",
+  "description": "",
+  "main": "generateInfo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^12.0.1"
+  }
+}
