@@ -2,8 +2,13 @@
 import fs from "fs";
 import path from "path";
 import inquirer from "inquirer";
+import { mapRepo } from "./mapRepo.js";
 
 async function generateInfoFile() {
+  if (process.argv.includes("map")) {
+    return mapRepo();
+  }
+
   try {
     const answers = await inquirer.prompt(questions);
 
@@ -41,7 +46,7 @@ async function generateInfoFile() {
     // Write the JSON to a file
     fs.writeFileSync(outputPath, jsonContent);
     fs.writeFileSync(outputPath, mdxPath);
-
+    mapRepo();
     console.log("info.json has been successfully generated!");
     console.log(
       "if you made any mistake, you can edit the info.json file manually."
