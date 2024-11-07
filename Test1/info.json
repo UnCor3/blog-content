@@ -1,8 +1,8 @@
 {
   "title": "Test1",
   "previewTitle": "Test123",
-  "desc": "",
-  "date": "2024-11-06",
+  "desc": "This is the second test blog desc",
+  "date": "November 7, 2024",
   "author": "uncore",
   "slug": "Test1",
   "keywords": ["blog", "tutorial"],

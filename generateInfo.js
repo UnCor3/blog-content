@@ -61,7 +61,7 @@ const defaultData = {
   title: "Untitled Post",
   previewTitle: "Preview Title of the Post",
   desc: "No description provided.",
-  date: new Date().toISOString().split("T")[0], // today's date in YYYY-MM-DD format
+  date: new Date().toLocaleDateString("en-US", dateOptions), // today's date in YYYY-MM-DD format
   author: "Anonymous",
   slug: "untitled-post",
   keywords: ["blog", "tutorial"],
@@ -158,3 +158,9 @@ const questions = [
 ];
 
 generateInfoFile();
+
+const dateOptions = {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
