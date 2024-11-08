@@ -29,7 +29,7 @@ async function generateInfoFile() {
       ...defaultData,
       ...answers,
       image,
-      slug: slugify(answers.slug),
+      slug: answers.slug,
       keywords: answers.keywords.split(",").map((keyword) => keyword.trim()),
       tags: answers.tags.split(",").map((tag) => tag.trim()),
       og: {

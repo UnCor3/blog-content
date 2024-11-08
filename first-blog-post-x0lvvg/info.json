@@ -16,20 +16,20 @@
   "tags": [
     "generic"
   ],
-  "reading_time": "1",
+  "reading_time": "3",
   "type": "coding-tutorial",
-  "slug": "first-blog-post-jl1v6-vvjs9f",
+  "slug": "first-blog-post-x0lvvg",
   "fileName": "content.mdx",
-  "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/first-blog-post-jl1v6/preview.jpg",
+  "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/first-blog-post-x0lvvg/preview.jpg",
   "og": {
     "title": "First blog post",
     "description": "No description provided.",
-    "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/first-blog-post-jl1v6/preview.jpg"
+    "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/first-blog-post-x0lvvg/preview.jpg"
   },
   "twitter": {
     "title": "First blog post",
     "description": "No description provided.",
-    "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/first-blog-post-jl1v6/preview.jpg",
+    "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/first-blog-post-x0lvvg/preview.jpg",
     "card": "summary_large_image"
   }
 }

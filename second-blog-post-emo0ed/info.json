@@ -14,22 +14,22 @@
     "tutorial"
   ],
   "tags": [
-    "generic"
+    "tutorial"
   ],
-  "reading_time": "20",
-  "type": "coding-tutorial",
-  "slug": "second-blog-post-7o21nx-jrf8ye",
+  "reading_time": "10",
+  "type": "news",
+  "slug": "second-blog-post-emo0ed",
   "fileName": "content.mdx",
-  "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/second-blog-post-7o21nx/preview.jpg",
+  "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/second-blog-post-emo0ed/preview.jpg",
   "og": {
     "title": "Second blog post",
     "description": "No description provided.",
-    "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/second-blog-post-7o21nx/preview.jpg"
+    "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/second-blog-post-emo0ed/preview.jpg"
   },
   "twitter": {
     "title": "Second blog post",
     "description": "No description provided.",
-    "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/second-blog-post-7o21nx/preview.jpg",
+    "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/second-blog-post-emo0ed/preview.jpg",
     "card": "summary_large_image"
   }
 }
