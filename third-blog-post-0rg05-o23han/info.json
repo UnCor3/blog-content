@@ -1,0 +1,35 @@
+{
+  "title": "Third blog post",
+  "previewTitle": "Third blog post",
+  "desc": "No description provided.",
+  "date": "November 8, 2024",
+  "author": [
+    {
+      "name": "uncore",
+      "link": "https://blog.uncore.me"
+    }
+  ],
+  "keywords": [
+    "blog",
+    "tutorial"
+  ],
+  "tags": [
+    "coding"
+  ],
+  "reading_time": "3",
+  "type": "tutorial",
+  "slug": "third-blog-post-0rg05-o23han",
+  "fileName": "content.mdx",
+  "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/third-blog-post-0rg05/preview.jpg",
+  "og": {
+    "title": "Third blog post",
+    "description": "No description provided.",
+    "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/third-blog-post-0rg05/preview.jpg"
+  },
+  "twitter": {
+    "title": "Third blog post",
+    "description": "No description provided.",
+    "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/third-blog-post-0rg05/preview.jpg",
+    "card": "summary_large_image"
+  }
+}

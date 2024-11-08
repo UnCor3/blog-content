@@ -24,13 +24,25 @@ async function generateInfoFile() {
     const answers = await inquirer.prompt(questions);
 
     // Create an object with the user input or defaults
+    const image = `https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/${answers.slug}/preview.jpg`;
     const infoData = {
       ...defaultData,
       ...answers,
-      image: `https://github.com/UnCor3/blog-content/blob/main/${answers.slug}/preview.jpg?raw=true`,
+      image,
       slug: slugify(answers.slug),
       keywords: answers.keywords.split(",").map((keyword) => keyword.trim()),
       tags: answers.tags.split(",").map((tag) => tag.trim()),
+      og: {
+        title: answers.title,
+        description: answers.desc,
+        image,
+      },
+      twitter: {
+        title: answers.title,
+        description: answers.desc,
+        image,
+        card: "summary_large_image",
+      },
     };
 
     // Generate the JSON string
@@ -82,18 +94,6 @@ const defaultData = {
   date: new Date().toLocaleDateString("en-US", dateOptions), // today's date in YYYY-MM-DD format
   author: [{ name: "uncore", link: "https://blog.uncore.me" }],
   keywords: ["blog", "tutorial"],
-  image: "/images/default.jpg",
-  og: {
-    title: "Untitled Post - A Blog Post",
-    description: "No description available for this post.",
-    image: "/images/default-og.jpg",
-  },
-  twitter: {
-    title: "Untitled Post",
-    description: "No description available.",
-    image: "/images/default-twitter.jpg",
-    card: "summary_large_image",
-  },
   tags: ["generic"],
   reading_time: 5,
   type: "blog",

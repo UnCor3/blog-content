@@ -1,0 +1,35 @@
+{
+  "title": "First blog post",
+  "previewTitle": "First blog post",
+  "desc": "No description provided.",
+  "date": "November 8, 2024",
+  "author": [
+    {
+      "name": "uncore",
+      "link": "https://blog.uncore.me"
+    }
+  ],
+  "keywords": [
+    "blog",
+    "tutorial"
+  ],
+  "tags": [
+    "generic"
+  ],
+  "reading_time": "1",
+  "type": "coding-tutorial",
+  "slug": "first-blog-post-jl1v6-vvjs9f",
+  "fileName": "content.mdx",
+  "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/first-blog-post-jl1v6/preview.jpg",
+  "og": {
+    "title": "First blog post",
+    "description": "No description provided.",
+    "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/first-blog-post-jl1v6/preview.jpg"
+  },
+  "twitter": {
+    "title": "First blog post",
+    "description": "No description provided.",
+    "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/first-blog-post-jl1v6/preview.jpg",
+    "card": "summary_large_image"
+  }
+}
