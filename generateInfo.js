@@ -4,6 +4,17 @@ import path from "path";
 import inquirer from "inquirer";
 import { mapRepo } from "./mapRepo.js";
 
+const dateOptions = {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+
+const slugify = (str) =>
+  str.toLowerCase().replaceAll(" ", "-") +
+  "-" +
+  Math.random().toString(36).substring(7);
+
 async function generateInfoFile() {
   if (process.argv.includes("map")) {
     return mapRepo();
@@ -16,38 +27,45 @@ async function generateInfoFile() {
     const infoData = {
       ...defaultData,
       ...answers,
+      image: `https://github.com/UnCor3/blog-content/blob/main/${answers.slug}/preview.jpg?raw=true`,
+      slug: slugify(answers.slug),
       keywords: answers.keywords.split(",").map((keyword) => keyword.trim()),
       tags: answers.tags.split(",").map((tag) => tag.trim()),
     };
 
     // Generate the JSON string
-    const jsonContent = JSON.stringify(infoData, null, 2); // pretty print with 2 spaces
+    const jsonContent = JSON.stringify(infoData, null, 2);
 
     // Specify the path where the JSON file will be saved
-    const outputDir = path.resolve(import.meta.dirname, answers.slug);
+    const outputDir = path.resolve(import.meta.dirname, infoData.slug);
 
     const outputPath = path.resolve(
       import.meta.dirname,
-      answers.slug,
+      infoData.slug,
       "info.json"
     );
 
-    //any file name with .mdx extension
     const mdxPath = path.resolve(
       import.meta.dirname,
-      answers.slug,
-      "index.mdx"
+      infoData.slug,
+      infoData.fileName
     );
 
     if (!fs.existsSync(outputDir)) {
-      fs.mkdirSync(outputDir, { recursive: true }); // Creates the directory if it doesn't exist
+      fs.mkdirSync(outputDir, { recursive: true });
     }
 
     // Write the JSON to a file
     fs.writeFileSync(outputPath, jsonContent);
-    fs.writeFileSync(outputPath, mdxPath);
-    mapRepo();
+    fs.writeFileSync(mdxPath, "## Start writing your content here");
+    fs.copyFile("./preview.jpg", outputDir + "/preview.jpg", (error) => {
+      if (error) {
+        console.error("Error copying file:", error);
+      }
+    });
+
     console.log("info.json has been successfully generated!");
+    mapRepo();
     console.log(
       "if you made any mistake, you can edit the info.json file manually."
     );
@@ -62,8 +80,7 @@ const defaultData = {
   previewTitle: "Preview Title of the Post",
   desc: "No description provided.",
   date: new Date().toLocaleDateString("en-US", dateOptions), // today's date in YYYY-MM-DD format
-  author: "Anonymous",
-  slug: "untitled-post",
+  author: [{ name: "uncore", link: "https://blog.uncore.me" }],
   keywords: ["blog", "tutorial"],
   image: "/images/default.jpg",
   og: {
@@ -93,8 +110,9 @@ const questions = [
   {
     type: "input",
     name: "previewTitle",
-    message: "Enter a preview title (seen in pagination):",
-    default: defaultData.previewTitle,
+    message:
+      "Enter a preview title which is seen in pagination (defaults to title):",
+    default: (answers) => answers.title,
   },
   {
     type: "input",
@@ -104,15 +122,9 @@ const questions = [
   },
   {
     type: "input",
-    name: "author",
-    message: "Enter the author name:",
-    default: defaultData.author,
-  },
-  {
-    type: "input",
     name: "slug",
     message: "Enter the slug (randomization will be handled):",
-    default: defaultData.slug,
+    default: (answers) => slugify(answers.title),
   },
   {
     type: "input",
@@ -120,12 +132,6 @@ const questions = [
     message:
       "Enter keywords for SEO (JavaScript,Hosting etc ,comma-separated):",
     default: defaultData.keywords.join(", "),
-  },
-  {
-    type: "input",
-    name: "image",
-    message: "Enter the image URL (will be seen in pagination):",
-    default: defaultData.image,
   },
   {
     type: "input",
@@ -155,12 +161,12 @@ const questions = [
     ],
     default: defaultData.type,
   },
+  {
+    type: "input",
+    name: "fileName",
+    message: "Enter the markdown file name",
+    default: "content.mdx",
+  },
 ];
 
 generateInfoFile();
-
-const dateOptions = {
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-};
