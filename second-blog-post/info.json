@@ -1,8 +1,9 @@
 {
+  "id": "if5jmI2BKXVBcY65qI69gegznL4=",
   "title": "Second blog post",
   "previewTitle": "Second blog post",
   "desc": "No description provided.",
-  "date": "November 8, 2024",
+  "date": "November 11, 2024",
   "author": [
     {
       "name": "uncore",
@@ -14,22 +15,22 @@
     "tutorial"
   ],
   "tags": [
-    "tutorial"
+    "generic"
   ],
-  "reading_time": "10",
-  "type": "news",
-  "slug": "second-blog-post-emo0ed",
+  "reading_time": "7",
+  "type": "tutorial",
   "fileName": "content.mdx",
-  "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/second-blog-post-emo0ed/preview.jpg",
+  "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/second-blog-post/preview.jpg",
+  "slug": "second-blog-post",
   "og": {
     "title": "Second blog post",
     "description": "No description provided.",
-    "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/second-blog-post-emo0ed/preview.jpg"
+    "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/second-blog-post/preview.jpg"
   },
   "twitter": {
     "title": "Second blog post",
     "description": "No description provided.",
-    "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/second-blog-post-emo0ed/preview.jpg",
+    "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/second-blog-post/preview.jpg",
     "card": "summary_large_image"
   }
 }

@@ -1,0 +1,36 @@
+{
+  "id": "+KmoSsy5J1W6SlpNPcW3gVfYdPI=",
+  "title": "First blog post",
+  "previewTitle": "First blog post",
+  "desc": "This is the first blog post",
+  "date": "November 11, 2024",
+  "author": [
+    {
+      "name": "uncore",
+      "link": "https://blog.uncore.me"
+    }
+  ],
+  "keywords": [
+    "blog",
+    "tutorial"
+  ],
+  "tags": [
+    "generic"
+  ],
+  "reading_time": "3",
+  "type": "coding-tutorial",
+  "fileName": "content.mdx",
+  "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/first-blog-post/open-ssh.jpg",
+  "slug": "first-blog-post",
+  "og": {
+    "title": "First blog post",
+    "description": "This is the first blog post",
+    "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/first-blog-post/open-ssh.jpg"
+  },
+  "twitter": {
+    "title": "First blog post",
+    "description": "This is the first blog post",
+    "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/first-blog-post/open-ssh.jpg",
+    "card": "summary_large_image"
+  }
+}

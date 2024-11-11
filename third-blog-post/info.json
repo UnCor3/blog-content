@@ -1,8 +1,9 @@
 {
+  "id": "Ar0ItIS4uXRXb7e4DDDz96LzRi0=",
   "title": "Third blog post",
   "previewTitle": "Third blog post",
   "desc": "No description provided.",
-  "date": "November 8, 2024",
+  "date": "November 11, 2024",
   "author": [
     {
       "name": "uncore",
@@ -16,20 +17,20 @@
   "tags": [
     "generic"
   ],
-  "reading_time": "5",
-  "type": "blog",
-  "slug": "third-blog-post-0r9ig",
+  "reading_time": "20",
+  "type": "news",
   "fileName": "content.mdx",
-  "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/third-blog-post-0r9ig/preview.jpg",
+  "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/third-blog-post/preview.jpg",
+  "slug": "third-blog-post",
   "og": {
     "title": "Third blog post",
     "description": "No description provided.",
-    "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/third-blog-post-0r9ig/preview.jpg"
+    "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/third-blog-post/preview.jpg"
   },
   "twitter": {
     "title": "Third blog post",
     "description": "No description provided.",
-    "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/third-blog-post-0r9ig/preview.jpg",
+    "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/third-blog-post/preview.jpg",
     "card": "summary_large_image"
   }
 }
