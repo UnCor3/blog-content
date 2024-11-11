@@ -3,6 +3,7 @@ import fs from "fs";
 import path from "path";
 import inquirer from "inquirer";
 import { mapRepo } from "./mapRepo.js";
+import { createHash } from "crypto";
 
 const dateOptions = {
   year: "numeric",
@@ -10,10 +11,7 @@ const dateOptions = {
   day: "numeric",
 };
 
-const slugify = (str) =>
-  str.toLowerCase().replaceAll(" ", "-") +
-  "-" +
-  Math.random().toString(36).substring(7);
+const slugify = (str) => str.toLowerCase().replaceAll(" ", "-");
 
 async function generateInfoFile() {
   if (process.argv.includes("map")) {
@@ -24,12 +22,14 @@ async function generateInfoFile() {
     const answers = await inquirer.prompt(questions);
 
     // Create an object with the user input or defaults
-    const image = `https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/${answers.slug}/preview.jpg`;
+    const slug = slugify(answers.title);
+    const image = `https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/${slug}/preview.jpg`;
     const infoData = {
+      id: createHash("sha1").update(slug).digest("base64"),
       ...defaultData,
       ...answers,
       image,
-      slug: answers.slug,
+      slug,
       keywords: answers.keywords.split(",").map((keyword) => keyword.trim()),
       tags: answers.tags.split(",").map((tag) => tag.trim()),
       og: {
@@ -63,9 +63,12 @@ async function generateInfoFile() {
       infoData.fileName
     );
 
-    if (!fs.existsSync(outputDir)) {
-      fs.mkdirSync(outputDir, { recursive: true });
+    if (fs.existsSync(outputDir)) {
+      console.error("The folder already exists!", outputDir);
+      return process.exit(1);
     }
+
+    fs.mkdirSync(outputDir, { recursive: true });
 
     // Write the JSON to a file
     fs.writeFileSync(outputPath, jsonContent);
@@ -119,12 +122,6 @@ const questions = [
     name: "desc",
     message: "Enter a description (for SEO and preview):",
     default: defaultData.desc,
-  },
-  {
-    type: "input",
-    name: "slug",
-    message: "Enter the slug (randomization will be handled):",
-    default: (answers) => slugify(answers.title),
   },
   {
     type: "input",
