@@ -6,7 +6,7 @@ const callback = (item, cb_path) => {
     //root folder case
     if (cb_path === "./") return;
     const infoFile = path.resolve(cb_path, "info.json");
-    const { keywords, tags, image, title, desc } = JSON.parse(
+    const { keywords, tags, image, title, desc, slug } = JSON.parse(
       fs.readFileSync(infoFile, "utf8")
     );
     item.shortInfo = {
@@ -15,6 +15,7 @@ const callback = (item, cb_path) => {
       image,
       title,
       desc,
+      slug,
     };
   } catch (error) {
     console.error("Error mapping the repo:", error);
