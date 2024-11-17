@@ -169,8 +169,8 @@ const questions = [
     type: 'input',
     name: 'difficulty',
     message: 'Enter the difficulty of the post',
-    choices: ['Beginner', 'Intermediate', 'Advanced', 'Expert'],
-    default: 'Beginner',
+    choices: ['beginner', 'intermediate', 'advanced', 'expert'],
+    default: 'beginner',
     when: (answers) => answers.type === 'tutorial',
   },
 ];
