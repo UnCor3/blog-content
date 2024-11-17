@@ -10,15 +10,10 @@
       "link": "https://blog.uncore.me"
     }
   ],
-  "keywords": [
-    "blog",
-    "tutorial"
-  ],
-  "tags": [
-    "generic"
-  ],
+  "keywords": ["blog", "tutorial"],
+  "tags": ["generic"],
   "reading_time": "7",
-  "type": "tutorial",
+  "type": "general",
   "fileName": "content.mdx",
   "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/second-blog-post/preview.jpg",
   "slug": "second-blog-post",
