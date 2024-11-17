@@ -10,15 +10,10 @@
       "link": "https://blog.uncore.me"
     }
   ],
-  "keywords": [
-    "blog",
-    "tutorial"
-  ],
-  "tags": [
-    "generic"
-  ],
+  "keywords": ["nextjs", "react"],
+  "tags": ["generic"],
   "reading_time": "3",
-  "type": "coding-tutorial",
+  "type": "tutorial",
   "fileName": "content.mdx",
   "image": "https://raw.githubusercontent.com/UnCor3/blog-content/refs/heads/main/first-blog-post/open-ssh.jpg",
   "slug": "first-blog-post",
